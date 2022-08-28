@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://kit.fontawesome.com/6131ecdde6.js" crossorigin="anonymous"></script>
+    <script src="sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="sweetalert2.min.css">
+    <title>Document</title>
+    
+</head>
+<body>
+    <div class="titulo">   
+         <h1>Ejercicios</h1></div>
+<div class="cajaprincipal">
+
+    <div class="ladoarriba">
+
+<!-- CAJA PALABRA-->
+    <div class="caja"> 
+        <a href="#" class="hola" > <i class="fa-solid fa-user-cowboy"></i>Una palabra</a>
+    </div>
+ <!-- MODAL palabra-->
+        <section class="modal">
+            <div class="modal_container">
+                
+                <input type="text" id="palabra" placeholder="ingrese nombre" >
+                <button type="button" onclick="longitud();">longitud</button>
+                    <button type="button" onclick="mayuscula();">mayuscula</button>
+                        <button type="button" onclick="minuscula();">minuscula</button>
+                            <button type="button" onclick="primer();">primer caracter</button>
+            
+            <a href="#" class="modal_close">cerrar</a>
+            </div>
+
+<!-- JAVASCRIPT PALABRA-->
+        <script>
+            function longitud(){
+                const longitud =parseInt (document.getElementById('palabra').value.length);
+                alert('la longitud de la palabra es: '+longitud)
+                }
+                function minuscula(){
+                    let minuscula=document.getElementById('palabra').value;
+                    alert (minuscula.toLowerCase());
+                    }
+                    function mayuscula(){
+                        let mayuscula=document.getElementById('palabra').value;
+                        alert(mayuscula.toUpperCase());
+                        }
+                        function primer(){
+                            let primer =document.getElementById('palabra').value[0];
+                            alert(primer.toUpperCase());
+
+                            }</script>
+        </section>
+
+ <!--  CONVERTIDOR-->
+            <div class="caja"> 
+                <a href="#" class="convertidor" > <i class="fa-solid fa-user-cowboy"></i>convertidor</a>
+            </div>
+<!-- MODAL CONVERTIDOR-->
+      <section class="modals">
+        <div class="modal_container">
+            
+            <label>temperatura: </label>
+            <input type="text" id="temperatura" placeholder="ingrese temperatura" >
+            <label>grado: </label>
+            <select id="tipo" name="tipo">
+            <option value="">tipo temperatura</option>
+            <option value="faretgeigh">faretgeigh</option>
+            <option value="kelvin">kelvin</option>
+            <option value="celsius">celsius</option></select>
+            <label>convertir a: </label>
+            <button type="button" onclick="faretgeigh();">faretgeigh</button>
+                <button type="button" onclick="kelvin();">kelvin</button>
+                    <button type="button" onclick="celsius();">celsius</button>
+                    
+                      
+        <a href="#" class="cerrar">cerrar</a>
+        </div>
+        <!-- JAVASCRIPT PALABRA-->
+        <script>
+            const temperatura=parseInt (document.getElementById('temperatura').value);
+            var tipo = document.getElementById('tipo').value;
+            function selectipo(){
+                alert(tipo)
+            }
+            function faretgeigh(){
+                const temperatura=parseInt (document.getElementById('temperatura').value);
+            var tipo = document.getElementById('tipo').value;
+                if(tipo=='faretgeigh'){
+                   alert(`${temperatura} fahreanheit es: ${temperatura} fahreanheit`)
+                 }
+                 else if(tipo=='celsius'){
+                    conversion=((temperatura*9)/5)+32
+                    alert(`${temperatura} celsius es ${conversion} fahreanheit`)
+                 }
+                 else if(tipo=='kelvin'){
+                    conversion=(((temperatura-273)*9)/5)+32
+                    alert(`${temperatura} kelvin es ${conversion} fahreanheit`)
+                 }
+            }
+            function kelvin(){
+                const temperatura=parseInt (document.getElementById('temperatura').value);
+            var tipo = document.getElementById('tipo').value;
+                if(tipo=='faretgeigh'){
+                    conversion=(temperatura-32)*5/9+273
+                   alert(`${temperatura} fahreanheit es: ${conversion} kelvin`)
+                 }
+                 else if(tipo=='celsius'){
+                    conversion=(temperatura+273)
+                    alert(`${temperatura} celsius es ${conversion} kelvin`)
+                 }
+                 else if(tipo=='kelvin'){
+                    
+                    alert(`${temperatura} kelvin es ${temperatura} kelvin`)
+                 }
+            }
+
+            function celsius(){
+                const temperatura=parseInt (document.getElementById('temperatura').value);
+            var tipo = document.getElementById('tipo').value;
+                if(tipo=='faretgeigh'){
+                    conversion=(temperatura-32)*5/9
+                   alert(`${temperatura} fahreanheit es: ${conversion} celsius`)
+                 }
+                 else if(tipo=='celsius'){
+                    alert(`${temperatura} celsius es ${temperatura} celsius`)
+                 }
+                 else if(tipo=='kelvin'){
+                    conversion=(temperatura-273)
+                    alert(`${temperatura} kelvin es ${temperatura} celsius`)
+                 }
+            }
+       
+           </script>
+        
+      </section>
+     
+    <br>
+    <div class="ladoabajo">
+        <div class="caja"> 
+            <a href="#" class="hola" > 
+            <i class="fa-solid fa-user-cowboy"></i>
+            una palabra</a></div>
+            <div class="caja"> 
+                <a href="#" class="hola" > 
+                <i class="fa-solid fa-user-cowboy"></i>
+                una palabra</a></div>
+                <div class="caja"> 
+                    <a href="#" class="hola" > 
+                    <i class="fa-solid fa-user-cowboy"></i>
+                    una palabra</a></div>
+    </div>
+    
+</div>
+ <!-- MOSTRAR MODAL PALABRA-->
+<script >
+    const openModal = document.querySelector('.hola');
+const modal = document.querySelector('.modal');
+const closeModal = document.querySelector('.modal_close');
+
+openModal.addEventListener('click', (e)=>{
+    e.preventDefault();
+    modal.classList.add('modal--show');
+});
+
+closeModal.addEventListener('click', (e)=>{
+    e.preventDefault();
+    modal.classList.remove('modal--show');
+});
+</script>
+<!-- MOSTRAR MODAL -->
+<script >
+    const abrirModal = document.querySelector('.convertidor');
+const modals = document.querySelector('.modals');
+const cerrarModal = document.querySelector('.cerrar');
+
+abrirModal.addEventListener('click', (e)=>{
+    e.preventDefault();
+    modals.classList.add('modal--show');
+});
+
+cerrarModal.addEventListener('click', (e)=>{
+    e.preventDefault();
+    modals.classList.remove('modal--show');
+});
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+</body>
+</html>
