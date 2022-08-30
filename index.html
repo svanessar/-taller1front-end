@@ -82,7 +82,7 @@
                       
         <a href="#" class="cerrar">cerrar</a>
         </div>
-        <!-- JAVASCRIPT PALABRA-->
+        <!-- JAVASCRIPT COVERTIDOR-->
         <script>
             const temperatura=parseInt (document.getElementById('temperatura').value);
             var tipo = document.getElementById('tipo').value;
@@ -141,6 +141,51 @@
         
       </section>
      
+
+
+<!-- CAJA TIPO DE TRIANGULO-->
+<div class="caja"> 
+    <a href="#" class="triangulo" > <i class="fa-solid fa-user-cowboy"></i>tipo de triangulo</a>
+</div>
+<!-- MODAL tipo de triangulo-->
+    <section class="modalt">
+        <div class="modal_container">
+            
+            <input type="text" id="lado1" placeholder="ingrese lado 1" >
+            <input type="text" id="lado2" placeholder="ingrese lado 2" >
+            <input type="text" id="lado3" placeholder="ingrese lado 3" >
+           
+            <button type="button" onclick="consulta();">evaluar</button>
+        <a href="#" class="cerrart">cerrar</a>
+        </div>
+
+<!-- JAVASCRIPT TRIANGULO-->
+    <script>
+        
+            function consulta(){
+            let a,b,c,equilatero=0,isosceles=0,escaleno=0,minimo,txtMin,maximo,txtMax;
+       a =parseInt (document.getElementById('lado1').value);
+       b =parseInt (document.getElementById('lado2').value);
+       c =parseInt (document.getElementById('lado3').value);
+            
+            alert('Triangulo : '+a+' , '+b+' , '+c);
+        if(a==b && b==c) {
+           alert(' El triangulo es equilatero ');
+            
+        } else if(a==b || b==c || a==c) {
+            alert(' El triangulo es isosceles ');
+           
+        } else { //(a!=b && b!=c)
+            alert(' El triangulo es escaleno ');
+            
+        }
+    }
+   
+      
+            </script>
+    </section>
+
+
     <br>
     <div class="ladoabajo">
         <div class="caja"> 
@@ -188,6 +233,22 @@ abrirModal.addEventListener('click', (e)=>{
 cerrarModal.addEventListener('click', (e)=>{
     e.preventDefault();
     modals.classList.remove('modal--show');
+});
+</script>
+<!-- MOSTRAR triangulo -->
+<script >
+    const modaltriangulo = document.querySelector('.triangulo');
+const modalt = document.querySelector('.modalt');
+const cerrarmodalt = document.querySelector('.cerrart');
+
+modaltriangulo.addEventListener('click', (e)=>{
+    e.preventDefault();
+    modalt.classList.add('modal--show');
+});
+
+cerrarmodalt.addEventListener('click', (e)=>{
+    e.preventDefault();
+    modalt.classList.remove('modal--show');
 });
 </script>
 
