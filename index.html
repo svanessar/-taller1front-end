@@ -185,13 +185,25 @@
             </script>
     </section>
 
-
-    <br>
+<br>
+    <br></div>
     <div class="ladoabajo">
         <div class="caja"> 
-            <a href="#" class="hola" > 
+            <a href="#" class="instructores" > 
             <i class="fa-solid fa-user-cowboy"></i>
-            una palabra</a></div>
+            instructores que me dictan clases</a></div>
+
+<!-- MODAL INSTRUCTORES-->
+<section class="modali">
+    <div class="modal_container">
+        
+        <input type="text" id="palabra" placeholder="ingrese nombre" >
+        <button type="button" onclick="buscar();">evalue</button>
+          
+    
+    <a href="#" class="cerrari">cerrar</a>
+    </div>
+</section>
             <div class="caja"> 
                 <a href="#" class="hola" > 
                 <i class="fa-solid fa-user-cowboy"></i>
@@ -219,7 +231,7 @@ closeModal.addEventListener('click', (e)=>{
     modal.classList.remove('modal--show');
 });
 </script>
-<!-- MOSTRAR MODAL -->
+<!-- MOSTRAR MODAL CONVERTIDOR-->
 <script >
     const abrirModal = document.querySelector('.convertidor');
 const modals = document.querySelector('.modals');
@@ -252,8 +264,23 @@ cerrarmodalt.addEventListener('click', (e)=>{
 });
 </script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+ <!-- MOSTRAR MODAL PALABRA-->
+ <script >
+    const abriri = document.querySelector('.instructores');
+const modali = document.querySelector('.modali');
+const cerrari = document.querySelector('.cerrari');
 
+abriri.addEventListener('click', (e)=>{
+    e.preventDefault();
+    modali.classList.add('modal--show');
+});
+
+cerrari.addEventListener('click', (e)=>{
+    e.preventDefault();
+    modali.classList.remove('modal--show');
+});
+</script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="js/sweetalert.js" ></script>
 </body>
 </html>

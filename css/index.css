@@ -35,11 +35,13 @@ h1{
     margin: 0;
     display: flex;
     flex-direction: row;
+    align-items: flex-start;
 }
 .ladoabajo{
     margin: 0;
     display: flex;
     flex-direction: row; 
+    align-items: flex-end;
 }
 .caja{
     background-color: rgb(255, 255, 255);
@@ -71,6 +73,20 @@ i{
 }
 
 .modals{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #111111bd;
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .6s .9s;
+    --transform: translateY(-100vh);
+    --transition: transform .8s;
+}
+.modali{
     position: fixed;
     top: 0;
     left: 0;
@@ -132,6 +148,17 @@ i{
 }
 
 .cerrar{
+    text-decoration: none;
+    color: #fff;
+    background-color: #000;
+    padding: 1em 3em;
+    border: 1px solid ;
+    border-radius: 6px;
+    display: inline-block;
+    font-weight: 300;
+    transition: background-color .3s;
+}
+.cerrari{
     text-decoration: none;
     color: #fff;
     background-color: #000;
