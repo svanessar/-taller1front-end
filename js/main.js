@@ -2,7 +2,7 @@
         
             function longitud(){
                 const longitud =parseInt (document.getElementById('palabra').value.length);
-                swal('Longitud','La Longitud de su palabra es: ' + palabra, 'success');
+                swal('Longitud','La Longitud de su palabra es: ' +palabra, 'success');
                 }
                 function minuscula(){
                     let minuscula=document.getElementById('palabra').value;
@@ -14,8 +14,7 @@
                         }
                         function primer(){
                             let primer =document.getElementById('palabra').value[0];
-                            alert(primer.toUpperCase());
-
+                            alert(primer.toUpperCase());}
 //JAVASCRIPT COVERTIDOR-->
                             
        
@@ -66,7 +65,7 @@
                                         alert(`${temperatura} kelvin es ${temperatura} celsius`)
                                      }
                                 }
-}
+
 //JAVASCRIPT TRIANGULO-->
    
         
@@ -149,6 +148,46 @@ cerrari.addEventListener('click', (e)=>{
     modali.classList.remove('modal--show');
 });
 
+
+//MOSTRAR JAVASCRIPT
+var probar = document.getElementById('probar');
+
+probar.onclick = function (e){
+    comprobar();
+}
+function comprobar(){
+    var nombre = document.getElementById('nombre').value;
+    var apellido = document.getElementById('apellido').value;
+    var area = document.getElementById('area').value;
+    console.log(nombre);
+    console.log(apellido);
+    console.log(area);
+    if (nombre=='tatiana' && apellido=='cabrera' && area =='calidad'||nombre=='tatiana' && apellido=='cabrera' && area =='frontend'){
+        alert('correcto');
+    }
+    else if (nombre=='adriana' && apellido=='duarte' && area =='diseño'){
+        alert('correcto'); 
+    }
+    else if (nombre=='carolina' && apellido=='forero' && area =='proyecto'){
+        alert('correcto'); 
+    }
+    else if (nombre=='yaneth' && apellido=='castillo' && area =='gestion'){
+        alert('correcto'); 
+    }
+    else if (nombre=='luis' && apellido=='baquero' && area =='cultura'){
+        alert('correcto'); 
+    }
+    else if (nombre=='fernando' && apellido=='galindo' && area =='base datos'){
+        alert('correcto'); 
+    }
+    else if (nombre=='jonathan' && apellido=='espitia' && area =='php'){
+        alert('correcto'); 
+    }
+    
+        else {
+            alert('incorrecto')
+        }
+    }
    
  
 
