@@ -15,9 +15,10 @@
 			<div class="form-control">
 			<label for="tipo">Tipo Documento: </label>
             <select id="tipo" name="tipo">
-                <option>TI</option>
-                <option>CC</option>
-                <option>extrangera</option>
+                <option value=" " >selecionar</option>
+                <option value="ti">TI</option>
+                <option value="cc">CC</option>
+                <option value="ex">extrangera</option>
             </select>
 			<i class="fas fa-check-circle"></i>
 			<i class="fas fa-exclamation-circle"></i>
@@ -74,7 +75,7 @@
                 <i class="fas fa-exclamation-circle"></i>
                 <small>Error message</small>
             </div>
-            <button>Submit</button>
+            <button id="validate">Submit</button>
         </form>
     </div>
 	<script src="js/form.js"></script>

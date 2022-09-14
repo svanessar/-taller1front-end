@@ -1,6 +1,6 @@
 
 	    const form = document.getElementById('form');
-		const tipo = document.getElementById('tipo');
+		const tipo = document.getElementById('#tipo');
 		const numero = document.getElementById('numero');
 		const usuario = document.getElementById('username');
 		const apellido = document.getElementById('apellido');
@@ -26,7 +26,7 @@
 			const passwordValue = password.value.trim();
 			const password2Value = password2.value.trim();
 			
-
+			
 			if(numeroValue === '') {
 				setErrorFor(numero, 'No puede este campo vacio');
 			} else if (!isNumero(numeroValue)) {
@@ -109,5 +109,7 @@
 		function isPassword(password){
 			return /^.{4,12}$/.test(password);
 		}
+
+
 		
 		

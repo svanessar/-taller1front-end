@@ -2,19 +2,20 @@
         
             function longitud(){
                 const longitud =parseInt (document.getElementById('palabra').value.length);
-                swal('Longitud','La Longitud de su palabra es: ' +palabra, 'success');
+                swal('Longitud','La Longitud de su palabra es: ' +longitud, 'success');
                 }
                 function minuscula(){
                     let minuscula=document.getElementById('palabra').value;
-                    alert (minuscula.toLowerCase());
+                    swal('Minuscula','' +minuscula.toLowerCase(), 'success');
                     }
                     function mayuscula(){
                         let mayuscula=document.getElementById('palabra').value;
-                        alert(mayuscula.toUpperCase());
+                        swal('Mayuscula','' +mayuscula.toUpperCase(), 'success');
                         }
                         function primer(){
                             let primer =document.getElementById('palabra').value[0];
-                            alert(primer.toUpperCase());}
+                            swal('Primer caracter','' +primer.toUpperCase(), 'success');
+                        }
 //JAVASCRIPT COVERTIDOR-->
                             
        
@@ -22,15 +23,18 @@
                                     const temperatura=parseInt (document.getElementById('temperatura').value);
                                 var tipo = document.getElementById('tipo').value;
                                     if(tipo=='faretgeigh'){
-                                       alert(`${temperatura} fahreanheit es: ${temperatura} fahreanheit`)
+                                        swal('Conversion',`${temperatura} fahreanheit es: ${temperatura} fahreanheit `, 'success');
+                                      
                                      }
                                      else if(tipo=='celsius'){
                                         conversion=((temperatura*9)/5)+32
-                                        alert(`${temperatura} celsius es ${conversion} fahreanheit`)
+                                        swal('Conversion',`${temperatura} celsius es ${conversion} fahreanheit`, 'success');
+                                        
                                      }
                                      else if(tipo=='kelvin'){
                                         conversion=(((temperatura-273)*9)/5)+32
-                                        alert(`${temperatura} kelvin es ${conversion} fahreanheit`)
+                                        swal('Conversion',`${temperatura} kelvin es ${conversion} fahreanheit`, 'success');
+                                        
                                      }
                                 }
                                 function kelvin(){
@@ -38,15 +42,17 @@
                                 var tipo = document.getElementById('tipo').value;
                                     if(tipo=='faretgeigh'){
                                         conversion=(temperatura-32)*5/9+273
-                                       alert(`${temperatura} fahreanheit es: ${conversion} kelvin`)
+                                        swal('Conversion',`${temperatura} fahreanheit es: ${conversion} kelvin`, 'success');
+                                       
                                      }
                                      else if(tipo=='celsius'){
                                         conversion=(temperatura+273)
-                                        alert(`${temperatura} celsius es ${conversion} kelvin`)
+                                        swal('Conversion',`${temperatura} celsius es ${conversion} kelvin`, 'success');
+                                        
                                      }
                                      else if(tipo=='kelvin'){
-                                        
-                                        alert(`${temperatura} kelvin es ${temperatura} kelvin`)
+                                        swal('Conversion',`${temperatura} kelvin es ${temperatura} kelvin`, 'success');
+                                      
                                      }
                                 }
                     
@@ -55,7 +61,8 @@
                                 var tipo = document.getElementById('tipo').value;
                                     if(tipo=='faretgeigh'){
                                         conversion=(temperatura-32)*5/9
-                                       alert(`${temperatura} fahreanheit es: ${conversion} celsius`)
+                                        swal('Conversion',`${temperatura} fahreanheit es: ${conversion} celsius`, 'success');
+                                       
                                      }
                                      else if(tipo=='celsius'){
                                         alert(`${temperatura} celsius es ${temperatura} celsius`)
