@@ -141,7 +141,7 @@ a{
     width: 90%;
     max-width: 600px;
     max-height: 90%;
-    background-color: rgb(111, 179, 243);
+    background-color: rgb(225, 227, 228);
     border-radius: 6px;
     padding: 2em 2.5em;
     display: grid;
@@ -163,53 +163,74 @@ a{
     text-decoration: none;
     color: #fff;
     background-color: #000;
-    padding: 1em 3em;
+    padding: 0.4em 1.2em;
     border: 1px solid ;
     border-radius: 6px;
     display: inline-block;
     font-weight: 300;
     transition: background-color .3s;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.cerrar:hover{
+    color: #000;
+    background-color: rgb(151, 241, 247);
+    border: 0;
 }
 .cerrari{
     text-decoration: none;
     color: #fff;
     background-color: #000;
-    padding: 1em 3em;
+    padding: 0.4em 1.2em;
     border: 1px solid ;
     border-radius: 6px;
     display: inline-block;
     font-weight: 300;
     transition: background-color .3s;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.cerrari:hover{
+    color: #000;
+    background-color:  rgb(151, 241, 247);
+    border: 0;
 }
 .cerrart{
     text-decoration: none;
     color: #fff;
     background-color: #000;
-    padding: 1em 3em;
+    padding: 0.4em 1.2em;
     border: 1px solid ;
     border-radius: 6px;
     display: inline-block;
     font-weight: 300;
     transition: background-color .3s;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-
-
+.cerrart:hover{
+    color: #000;
+    background-color: rgb(151, 241, 247);
+    border: 0;
+}
+label{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
 .modal_close{
     text-decoration: none;
     color: #fff;
     background-color: #000;
-    padding: 2% 12%;
+    padding: 0.4em 1.2em;
     border: 1px solid ;
     border-radius: 6px;
     display: inline-block;
     font-weight: 300;
     transition: background-color .3s;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .modal_close:hover{
-    color: #6439fd;
-    background-color: #fff;
+    color: #000;
+    background-color:  rgb(151, 241, 247);
+    border: 0;
 }
 
 input{
@@ -218,6 +239,7 @@ input{
     width: 100%;
     padding: auto;
     border: none;
+    background-color: rgb(225, 227, 228);;
     border-bottom: 2px solid rgb(5, 5, 5);
     font-size: 1.5em;
 }
@@ -229,11 +251,12 @@ select{
     background-color: #f1f1f1;
 }
 button{
-    width: 80%;
-    background-color: #6439fd;
+    width: 70%;
+    background-color: #26bfe6;
     border: 0;
     color: white;
     height: 6vh;
     margin: 1%;
+    font-size: 1.2em;
 }
 

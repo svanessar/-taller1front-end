@@ -17,7 +17,7 @@
 		
 		function checkInputs() {
 			// trim to remove the whitespaces
-			const tipoValue = tipo.value.trim();
+
 			const numeroValue = numero.value.trim();
 			const usuarioValue = usuario.value.trim();
 			const apellidoValue = apellido.value.trim();

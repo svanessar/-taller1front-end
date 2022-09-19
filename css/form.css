@@ -4,8 +4,11 @@
 * {
 	box-sizing: border-box;
 }
+body{
+	background-color: #badeec;
+}
 
-body {
+.hi {
 	
 	font-family: 'Open Sans', sans-serif;
 	display: flex;
@@ -13,6 +16,16 @@ body {
 	justify-content: center;
 	min-height: 100vh;
 	margin: 0;
+}
+.home{
+	margin: 3% 5%;
+}
+svg { 
+	
+	margin: 0 auto; 
+	width: 40px; 
+	height: auto;
+  color: black; 
 }
 
 .container {
@@ -51,6 +64,7 @@ body {
 
 .form-control input {
 	border: 2px solid #f0f0f0;
+	
 	border-radius: 4px;
 	display: block;
 	font-family: inherit;

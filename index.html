@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/index.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
-   
     <script src="https://kit.fontawesome.com/6131ecdde6.js" crossorigin="anonymous"></script>
     <script src="sweetalert2.min.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
@@ -114,14 +113,47 @@
 <!-- MODAL INSTRUCTORES-->
 <section class="modali">
     <div class="modal_container">
-        <p><strong>Ejercicio 4:</strong> Comprobar ¿cómo se llama el instructor y qué orienta? </p>
-
-        <input type="text" id="nombre" placeholder="ingrese nombre" >
-        <input type="text" id="apellido" placeholder="ingrese apellido" >
-        <input type="text" id="area" placeholder="ingrese area" >
-        <button type="button" id="probar">evalue</button>
-          
+        <label>Nombres:</label>
+        <select id="nombre">
+        <option value="">Elegir</option>
+        <option value="Carolina">Carolina</option>
+        <option value="Adriana">Adriana</option>
+        <option value="Tatiana">Tatiana</option>
+        <option value="Fernando">Fernando</option>
+        <option value="Jhonatan">Jhonatan</option>
+        <option value="Luis">Luis</option>
+        <option value="Yaneth">Yaneth</option>
+    </select>
     
+    <label>Apellidos:</label>
+    <select id="apellido">
+        <option value="">Elegir</option>
+        <option value="Forero">Forero</option>
+        <option value="Duarte">Duarte</option>
+        <option value="Cabrera">Cabrera</option>
+        <option value="Galindo">Galindo</option>
+        <option value="Espitia">Espitia</option>
+        <option value="Baquero">Baqueros</option>
+        <option value="Castillo">Castillo</option>  
+    </select>
+    
+    <label>Actividades:</label>
+    <select id="materia">
+        <option value="">Elegir</option>
+        <option value="Seg_proyecto">Seg proyecto</option>
+        <option value="Diseño">Diseño</option>
+        <option value="Calidad">Calidad</option>
+        <option value="Base_datos">Base datos</option>
+        <option value="Php">Php</option>
+        <option value="Cultura">Cultura Fisica</option>
+        <option value="Gestion">Gestion ambiental</option>
+        <option value="FrontEnd">Front end</option>
+    </select>
+    <br>
+    <br>
+        <button  onclick="Respuesta();">Evalue</button>
+    
+      
     <a href="#" class="cerrari">cerrar</a>
     </div>
 </section>
@@ -130,7 +162,7 @@
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-back" viewBox="0 0 16 16">
                     <path d="M0 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2H2a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H2z"/>
                   </svg><br>
-                <a href="figuras.html" class="figuras" > figuras</a></div>
+                <a href="figuras.html" > figuras</a></div>
 
 <!-- CAJA DE FORMULARIO -->
                 <div class="caja"> 

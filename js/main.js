@@ -27,7 +27,7 @@
                                       
                                      }
                                      else if(tipo=='celsius'){
-                                        conversion=((temperatura*9)/5)+32
+                                        conversion=((temperatura-32)*0.55)
                                         swal('Conversion',`${temperatura} celsius es ${conversion} fahreanheit`, 'success');
                                         
                                      }
@@ -60,16 +60,16 @@
                                     const temperatura=parseInt (document.getElementById('temperatura').value);
                                 var tipo = document.getElementById('tipo').value;
                                     if(tipo=='faretgeigh'){
-                                        conversion=(temperatura-32)*5/9
+                                        conversion=(temperatura*0.5)+32
                                         swal('Conversion',`${temperatura} fahreanheit es: ${conversion} celsius`, 'success');
                                        
                                      }
                                      else if(tipo=='celsius'){
-                                        alert(`${temperatura} celsius es ${temperatura} celsius`)
+                                        swal('Conversion',`${temperatura} celsius es ${temperatura} celsius`, 'success');
                                      }
                                      else if(tipo=='kelvin'){
                                         conversion=(temperatura-273)
-                                        alert(`${temperatura} kelvin es ${temperatura} celsius`)
+                                        swal('Conversion',`${temperatura} kelvin es ${conversion} celsius`, 'success');
                                      }
                                 }
 
@@ -84,16 +84,60 @@
             
             alert('Triangulo : '+a+' , '+b+' , '+c);
         if(a==b && b==c) {
-           alert(' El triangulo es equilatero ');
+            swal('Conversion',' El triangulo es equilatero ', 'success');
             
         } else if(a==b || b==c || a==c) {
-            alert(' El triangulo es isosceles ');
+            swal('Conversion',' El triangulo es isosceles ', 'success');
            
         } else { //(a!=b && b!=c)
-            alert(' El triangulo es escaleno ');
+            swal('Conversion',' El triangulo es escaleno ', 'success');
             
         }
   }
+
+  //MOSTRAR JAVASCRIPT
+  function Respuesta(){
+
+    var nombre =document.getElementById('nombre').value;
+    var apellido =document.getElementById('apellido').value;
+    var materia =document.getElementById('materia').value;
+    
+       
+    if(nombre=="Carolina" && apellido=="Forero" && materia=="Seg_proyecto") {
+       alert('Respuesta Correcta');
+    
+    }
+    if(nombre=="Adriana" && apellido=="Duarte" && materia=="Diseño") {
+        alert('Respuesta Correcta');
+     
+     }
+    
+     if(nombre=="Tatiana" && apellido=="Cabrera" && materia=="Calidad" || materia=="FrontEnd") {
+        alert('Respuesta Correcta');
+     
+     }
+     if(nombre=="Fernando" && apellido=="Galindo" && materia=="Base_datos") {
+        alert('Respuesta Correcta');
+     
+     }
+     if(nombre=="Jhonatan" && apellido=="Espitia" && materia=="Php") {
+        alert('Respuesta Correcta');
+     
+     }
+     if(nombre=="Luis" && apellido=="Baquero" && materia=="Cultura") {
+        alert('Respuesta Correcta');
+     
+     }
+     if(nombre=="Yaneth" && apellido=="Castillo" && materia=="Gestion") {
+        alert('Respuesta Correcta');
+     
+     }
+    else  {
+        alert('Respuesta Incorrecta');
+     
+     }
+    }
+   
   //MOSTRAR MODAL PALABRA-->
 
     const openModal = document.querySelector('.hola');
@@ -155,47 +199,23 @@ cerrari.addEventListener('click', (e)=>{
     modali.classList.remove('modal--show');
 });
 
+//MOSTRAR figuras -->
+const abrirf = document.querySelector('.figuras');
+const modalf = document.querySelector('.modalf');
+const cerrarf = document.querySelector('.cerrarf');
 
-//MOSTRAR JAVASCRIPT
-var probar = document.getElementById('probar');
+abrirf.addEventListener('click', (e)=>{
+    e.preventDefault();
+    modalf.classList.add('modal--show');
+});
 
-probar.onclick = function (e){
-    comprobar();
-}
-function comprobar(){
-    var nombre = document.getElementById('nombre').value;
-    var apellido = document.getElementById('apellido').value;
-    var area = document.getElementById('area').value;
-    console.log(nombre);
-    console.log(apellido);
-    console.log(area);
-    if (nombre=='tatiana' && apellido=='cabrera' && area =='calidad'||nombre=='tatiana' && apellido=='cabrera' && area =='frontend'){
-        alert('correcto');
-    }
-    else if (nombre=='adriana' && apellido=='duarte' && area =='diseño'){
-        alert('correcto'); 
-    }
-    else if (nombre=='carolina' && apellido=='forero' && area =='proyecto'){
-        alert('correcto'); 
-    }
-    else if (nombre=='yaneth' && apellido=='castillo' && area =='gestion'){
-        alert('correcto'); 
-    }
-    else if (nombre=='luis' && apellido=='baquero' && area =='cultura'){
-        alert('correcto'); 
-    }
-    else if (nombre=='fernando' && apellido=='galindo' && area =='base datos'){
-        alert('correcto'); 
-    }
-    else if (nombre=='jonathan' && apellido=='espitia' && area =='php'){
-        alert('correcto'); 
-    }
-    
-        else {
-            alert('incorrecto')
-        }
-    }
-   
+cerrarf.addEventListener('click', (e)=>{
+    e.preventDefault();
+    modalf.classList.remove('modal--show');
+});
+
+
+
  
 
                         
